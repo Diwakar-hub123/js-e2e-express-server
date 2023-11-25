@@ -1,0 +1,25 @@
+steps:
+  # Step 1: Use an official Node.js image
+  - name: 'node:16'
+    id: 'Install Node.js'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        npm install -g npm  # Upgrade npm to the latest version
+
+  # Step 2: Install dependencies
+  - name: 'node:16'
+    id: 'npm install'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'npm install'
+
+  # Step 3: Build the Node.js application
+  - name: 'node:16'
+    id: 'npm build'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'npm run build'
