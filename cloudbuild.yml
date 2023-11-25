@@ -23,7 +23,7 @@ steps:
     args:
       - '-c'
       - 'npm run build'
-  steps:
+      
   # Step 4: Copy project files
   - name: 'gcr.io/cloud-builders/gcloud'
     entrypoint: 'bash'
