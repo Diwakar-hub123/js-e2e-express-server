@@ -23,3 +23,9 @@ steps:
     args:
       - '-c'
       - 'npm run build'
+
+artifacts:
+  objects:
+    location: 'gs://artifacts.prismatic-night-406207.appspot.com'
+    paths:
+      - 'build/**'
