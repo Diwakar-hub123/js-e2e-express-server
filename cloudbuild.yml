@@ -1,6 +1,6 @@
 steps:
   # Step 1: Use an official Node.js image
-  - name: 'node:16'
+  - name: 'node:20'
     id: 'Install Node.js'
     entrypoint: 'bash'
     args:
