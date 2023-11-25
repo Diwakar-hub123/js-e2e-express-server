@@ -31,8 +31,8 @@ steps:
       - '-c'
       - |
         mkdir -p /workspace/src /workspace/public
-        cp -r $PROJECT_DIR/src/* /workspace/src
-        cp -r $PROJECT_DIR/public/* /workspace/public
+        cp -r src/* /workspace/src
+        cp -r public/* /workspace/public
 
   # Step 5: Publish npm artifact
   - name: 'gcr.io/cloud-builders/gcloud'
