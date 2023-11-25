@@ -28,5 +28,5 @@ artifacts:
   objects:
     location: 'gs://artifacts.prismatic-night-406207.appspot.com/build'
     paths:
-      - 'src/**'
-      - 'public/**'
+      - '/workspace/src/**'
+      - '/workspace/public/**'
