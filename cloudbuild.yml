@@ -23,27 +23,10 @@ steps:
     args:
       - '-c'
       - 'npm run build'
-      
-  # Step 4: Copy project files
-  - name: 'gcr.io/cloud-builders/gcloud'
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - |
-        mkdir -p /workspace/src /workspace/public
-        cp -r src/* /workspace/src
-        cp -r public/* /workspace/public
-
-  # Step 5: Publish npm artifact
-  - name: 'gcr.io/cloud-builders/gcloud'
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - |
-        gsutil -m cp -r /workspace/* gs://artifacts.prismatic-night-406207.appspot.com
 
 artifacts:
   objects:
     location: 'gs://artifacts.prismatic-night-406207.appspot.com'
     paths:
-      - '**'
+      - 'src/**'
+      - 'public/**'
